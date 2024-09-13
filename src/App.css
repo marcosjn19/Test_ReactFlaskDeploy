@@ -1,0 +1,74 @@
+.x-follow-card {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 0.8rem;
+    justify-content: space-between;
+}
+
+.x-follow-card-header {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.x-follow-card-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.x-follow-card-infoUserName {
+    opacity: 0.6;
+}
+
+.x-follow-card-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 1000px;
+}
+
+.x-follow-card-button {
+    cursor: pointer;
+    margin-left: 16px;
+    border: 0;
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-weight: bold;
+    border: 1px solid #222;
+    transition: .3s ease all;
+}
+
+.x-follow-card-button:hover {
+    opacity: 0.8;
+}
+
+.x-follow-card-text {
+    display: block;
+}
+
+.x-follow-card-button.is-following {
+    border: 1px solid #bbb;
+    background: transparent;
+    color: #fff;
+    width: 140px;
+}
+
+.x-follow-card-button.is-following:hover {
+    background: rgba(255, 102, 102, 0.178);
+    color: red;
+    border: 1px solid red;
+    transition: .3s ease all;
+    opacity: 1;
+}
+
+.x-follow-card-button.is-following:hover .x-follow-card-stopFollow {
+    display: block;
+}
+
+.x-follow-card-button.is-following:hover .x-follow-card-text {
+    display: none;
+}
+
+.x-follow-card-stopFollow {
+    display: none;
+}
