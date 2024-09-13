@@ -8,9 +8,9 @@ export function App () {
 
   const fetchAPI = async () => {
     console.log("Entro aqui")
-    const response = fetch("/api/users").then((r)=>r.json())
+    //const response = fetch("/api/users").then((r)=>r.json())
+    const response = await axios.get("127.0.0.1:5555/api/users")
     console.log("Salgo aca")
-    //const response = await axios.get("127.0.0.1:5555/api/users")
     setArray(response.data.users)
   }
 
