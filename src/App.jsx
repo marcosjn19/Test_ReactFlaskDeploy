@@ -7,7 +7,7 @@ export function App () {
   const [array, setArray] = useState([])
 
   const fetchAPI = async () => {
-    const response = await axios.get("https://reactxfollowcard-server-demo-1.onrender.com:10000/api/users")
+    const response = await axios.get("http://127.0.0.1:5555/api/users")
     setArray(response.data.users)
   }
 
@@ -18,6 +18,7 @@ export function App () {
 
   return (
     <section className='App'>
+      <h1>probando</h1>
       {
         array.map(({ userName, name, isFollowing }) => (
           <XFollowCard
