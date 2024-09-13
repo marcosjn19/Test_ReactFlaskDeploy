@@ -7,7 +7,8 @@ export function App () {
   const [array, setArray] = useState([])
 
   const fetchAPI = async () => {
-    const response = await axios.get("https://test-reactflaskdeploy.onrender.com:5555/api/users")
+    const response = fetch("/api/users").then((r)=>r.json())
+    //const response = await axios.get("127.0.0.1:5555/api/users")
     setArray(response.data.users)
   }
 
