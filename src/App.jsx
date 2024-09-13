@@ -7,7 +7,9 @@ export function App () {
   const [array, setArray] = useState([])
 
   const fetchAPI = async () => {
+    console.log("Entro aqui")
     const response = fetch("/api/users").then((r)=>r.json())
+    console.log("Salgo aca")
     //const response = await axios.get("127.0.0.1:5555/api/users")
     setArray(response.data.users)
   }
