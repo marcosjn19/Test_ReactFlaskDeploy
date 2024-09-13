@@ -7,7 +7,7 @@ export function App () {
   const [array, setArray] = useState([])
 
   const fetchAPI = async () => {
-    const response = await axios.get("http://0.0.0.0:5555/api/users")
+    const response = await axios.get("HTTP:555/api/users")
     setArray(response.data.users)
   }
 
